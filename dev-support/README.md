@@ -55,3 +55,11 @@ This directory contains tools to help in the development and release of Apache H
 Previously, the scripts test-patch.sh, smart-apply-patch.sh, releasedocmaker.py, and shelldocs.py were in this directory.  They have been moved to the Apache Yetus project (https://yetus.apache.org).  These scripts have been replaced with wrapper scripts located in the bin directory. Command line options are generally different than the previous versions that shipped with older versions of Apache Hadoop.
 
 The wrapper scripts will download, verify (if GPG is installed), and cache a local copy of Apache Yetus in the hadoop/patchprocess directory. The version that is used may be overridden by setting the HADOOP\_YETUS\_VERSION environment variable.  The cache directory may be overwritten by setting the HADOOP\_PATCHPROCESS directory.  If a local version of Apache Yetus is already installed, it may be used instead by setting the YETUS\_HOME environment variable to point to that directory.
+
+Collibra customization:-
+1. Start the dev environment by running `./start-build-env.sh`
+2. Install the customized jackson-core-2.15.2.jar by running following commands:
+`cd hadoop-client-modules &&
+mvn install:install-file -Dfile=jackson-core-2.15.2.jar -DgroupId=com.fasterxml.jackson.core -DartifactId=jackson-core -Dversion=2.15.2 -Dpackaging=jar -DgeneratePom=true`
+3. Create the package of hadoop-client-runtime (Ignore the failure)
+`mvn clean package -Pdist -DskipTests -Dtar -Dmaven.javadoc.skip=true -Dmaven.test.skip=true`
