@@ -22,7 +22,9 @@ cd "$(dirname "$0")" # connect to root
 DOCKER_DIR=dev-support/docker
 DOCKER_FILE="${DOCKER_DIR}/Dockerfile"
 
-CPU_ARCH=$(echo "$MACHTYPE" | cut -d- -f1)
+#CPU_ARCH=$(echo "$MACHTYPE" | cut -d- -f1)
+# To derive CPU arch on a Mac
+CPU_ARCH=$(uname -m | cut -d- -f1)
 if [[ "$CPU_ARCH" = "aarch64" || "$CPU_ARCH" = "arm64" ]]; then
   DOCKER_FILE="${DOCKER_DIR}/Dockerfile_aarch64"
 fi
