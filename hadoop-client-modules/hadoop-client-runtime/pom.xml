@@ -196,10 +196,28 @@
                       </excludes>
                     </filter>
                     <filter>
+                      <artifact>org.apache.commons:*</artifact>
+                      <excludes>
+                        <exclude>META-INF/versions/9/module-info.class</exclude>
+                      </excludes>
+                    </filter>
+                    <filter>
                       <!-- skip french localization -->
                       <artifact>org.apache.commons:commons-math3</artifact>
                       <excludes>
                         <exclude>assets/org/apache/commons/math3/**/*</exclude>
+                      </excludes>
+                    </filter>
+                    <filter>
+                      <artifact>commons-beanutils:commons-beanutils</artifact>
+                      <excludes>
+                        <exclude>META-INF/versions/9/module-info.class</exclude>
+                      </excludes>
+                    </filter>
+                    <filter>
+                      <artifact>commons-io:commons-io</artifact>
+                      <excludes>
+                        <exclude>META-INF/versions/9/module-info.class</exclude>
                       </excludes>
                     </filter>
                     <filter>
@@ -233,6 +251,8 @@
                         <exclude>jnamed*</exclude>
                         <exclude>lookup*</exclude>
                         <exclude>update*</exclude>
+                        <exclude>META-INF/versions/21/module-info.class</exclude>
+                        <exclude>META-INF/versions/21/**/*</exclude>
                       </excludes>
                     </filter>
                     <filter>
