@@ -260,6 +260,8 @@
                       <excludes>
                         <exclude>google/protobuf/*.proto</exclude>
                         <exclude>google/protobuf/**/*.proto</exclude>
+                        <exclude>META-INF/maven/com.google.protobuf/protobuf-java/pom.properties</exclude>
+                        <exclude>META-INF/maven/com.google.protobuf/protobuf-java/pom.xml</exclude>
                       </excludes>
                     </filter>
                     <filter>
@@ -272,6 +274,13 @@
                       <artifact>com.google.code.gson:gson</artifact>
                       <excludes>
                         <exclude>META-INF/versions/9/module-info.class</exclude>
+                      </excludes>
+                    </filter>
+                    <filter>
+                      <artifact>*:*</artifact>
+                      <excludes>
+                        <exclude>META-INF/maven/com.google.protobuf/protobuf-java/pom.properties</exclude>
+                        <exclude>META-INF/maven/com.google.protobuf/protobuf-java/pom.xml</exclude>
                       </excludes>
                     </filter>
 
