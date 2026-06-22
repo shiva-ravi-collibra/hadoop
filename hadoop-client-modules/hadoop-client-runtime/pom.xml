@@ -22,7 +22,7 @@
    <relativePath>../../hadoop-project</relativePath>
 </parent>
   <artifactId>hadoop-client-runtime</artifactId>
-  <version>3.4.2</version>
+  <version>3.4.2-collibradq-10</version>
   <packaging>jar</packaging>
 
   <description>Apache Hadoop Client</description>
@@ -159,6 +159,8 @@
                       <exclude>org.xerial.snappy:*</exclude>
                       <!-- leave out kotlin classes -->
                       <exclude>org.jetbrains.kotlin:*</exclude>
+                      <!-- leave out Jline classes -->
+                      <exclude>org.jline:*</exclude>
                     </excludes>
                   </artifactSet>
                   <filters>
