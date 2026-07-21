@@ -22,7 +22,7 @@
    <relativePath>../../hadoop-project</relativePath>
 </parent>
   <artifactId>hadoop-client-runtime</artifactId>
-  <version>3.4.2-collibradq-12</version>
+  <version>3.4.2-collibradq-13</version>
   <packaging>jar</packaging>
 
   <description>Apache Hadoop Client</description>
